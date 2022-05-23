@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+html {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #004643;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-size: 1em;
+    line-height: 1.27777778em;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0b0b0b;
+    display: grid;
+    place-items: center;
+  }
+
+  .loader {
+    border: 16px solid #e3e3e3;
+    border-top: 16px solid #004643;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+header {
+    margin-bottom: 2.55em;
+    padding: 1.6em;
+}
+
+img{
+    max-width: 100%;
+}
+
+.heading {
+    font-size: 4.2em;
+    line-height: 1.22em;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+#search-bar {
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 2.611em;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.8em auto;
+}
+
+#search-bar i {
+    color: #f9bc60;
+    margin: 10px;
+}
+
+#search-bar input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    margin-left: 1.27em;
+}
+
+.btn {
+    border: none;
+    margin: 0;
+    background-color: #f9bc60;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0.7rem;
+    font-size: 1em;
+    transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: #004643;
+    border: 1px solid #f9bc60;
+    color: #f9bc60;
+}
+
+#search-bar button {
+    border-radius: 0 2.611em 2.611em 0 !important;
+
+}
+
+#mobile-search, #mobile-icon {
+    display: none;
+}
+
+.main-section {
+    margin: 6.38em 0;
+}
+
+.users-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    row-gap: 1.5em;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.border-shadow{
+    border: 1px solid rgba(171, 209, 198, .1);
+    box-shadow: 0 26px 85px -58px;
+    color: #abd1c6;
+}
+
+.user {
+    width: 25%;
+    max-height: 300px;
+    margin: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    transition: all 300ms ease-in-out;
+}
+
+.user:hover {
+    box-shadow: none;
+}
+
+.user-img {
+    /* background-image: url("img/user.jpg"); */
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.user-details {
+    text-align: center;
+}
+
+.user-details h3{
+    font-weight: 400 !important;
+    letter-spacing: .3em;
+    font-size: 1em;
+    margin: 0;
+    color: #f9bc60;
+}
+
+.user-details p {
+    font-size: 0.8em;
+    margin: 5px;
+    color: #abd1c6;
+}
+
+.pagination {
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+    gap: 15px;
+    max-width: 60%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.mobile-pagination {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #abd1c6;
+    color: #004643;
+}
+
+footer p {
+    margin: 0;
+    padding: .7rem;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 600px){
+    .user {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 2.611em;
+    }
+
+    #desktop-icon, #desktop-search {
+        display: none;
+    }
+
+    #mobile-search, #mobile-icon {
+        display: block;
+        color: #ffffff !important;
+    }
+
+    .mobile-pagination {
+        display: block;
+        color: #ffffff;
+    }
+
+    .desktop-pagination {
+        display: none;
+    }
+
+    .btn {
+        padding: 0.35;
+    }
+
+    
+}
